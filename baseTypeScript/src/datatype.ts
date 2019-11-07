@@ -17,7 +17,7 @@ let arr2: Array<number> = [1, 2, 3];  // 这种情况是能输入number类型的
 let arr3: Array<number | string> = [1, 2, 3, "4"];
 
 // 元祖
-let tuple: [number, string] = [1, "2"];
+let tuple: [number, string] = [1, "2"];  // 元祖后面的元素的类型需要跟前面定义的类型顺序一致
 tuple.push(3);
 // console.log(tuple[2])  元祖可以访问已经定义好的元素位置，但是不能访问后来添加的元素
 
