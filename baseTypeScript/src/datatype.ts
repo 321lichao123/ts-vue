@@ -13,7 +13,8 @@ let str: string = "lichao";
 
 // 数组
 let arr1: number[] = [1, 2, 3];
-let arr2: Array<number> = [1, 2, 3];
+let arr2: Array<number> = [1, 2, 3];  // 这种情况是能输入number类型的，输入其他类型会报错
+let arr3: Array<number | string> = [1, 2, 3, "4"];
 
 // 元祖
 let tuple: [number, string] = [1, "2"];
