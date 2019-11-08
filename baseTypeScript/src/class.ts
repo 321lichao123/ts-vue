@@ -9,14 +9,14 @@ import { worker } from "cluster";
  * @FilePath: \ts-vue\baseTypeScript\src\class.ts
  */
 // class Dog {
-//   constructor (name: string) {
+//   constructor (name: string) {   // 构造函数中需要将类名中定义的属性全部初始化一下
 //     this.name = name;
 //   }
 //   name: string
-//   run() {}
-//   private pri() {}
-//   protected pro() {}
-//   readonly legs: number = 4; 
+//   run() {}ben        // 公有方法可以在实例、本类和子类中使用
+//   private pri() {}  // 私有方法只能在本类中使用，不能在实例和子类中使用
+//   protected pro() {}  // 保护方放可以在本类和子类继承中使用，但不能在实例中使用
+//   readonly legs: number = 4;   // 只读属性只能读取不能修改
 // }
 
 // console.log(Dog.prototype);
@@ -26,8 +26,8 @@ import { worker } from "cluster";
 // // dog.pro()
 
 // class Husky extends Dog {
-//   constructor(name: string, color: string) {
-//     super(name);
+//   constructor(name: string, color: string) { // 子类继承父类需要将父类中的属性重写一遍
+//     super(name);     // 子类定义的熟悉需要在super之后调用
 //     this.color = color;   
 //     // this.pri()
 //     this.pro();
