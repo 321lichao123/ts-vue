@@ -34,7 +34,11 @@ interface LogIn2<T> {   // 这种写法就是整个接口参数进行了泛型
 }
 
 // let myLog1: LogIn2 = log;  // 这种就需要明确一种参数类型
-let myLog1: LogIn2<number> = log;
+let myLog1: LogIn1 = function<T>(value: T): T {
+   console.log(value);
+   return value
+}
+let myLog2: LogIn2<number> = log;
 console.log(myLog1(1));
 
 class Generics<T = String> {   // 对泛型定义一个默认类型
