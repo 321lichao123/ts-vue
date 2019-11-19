@@ -4,5 +4,6 @@
     "module": "commonjs",
     "strict": true,
     "outDir": "./dist"
-  }
+  },
+  "includes": ["src"]         // 打包去除src层
 }
